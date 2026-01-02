@@ -14,8 +14,9 @@ const span = document.getElementsByClassName("close")[0];
  */
 function openModal(element) {
     modal.style.display = "block";
-    // Get the full resolution source from the data attribute (data-full-src)
-    modalImg.src = element.getAttribute('data-full-src');
+    // Direct src utha lo
+    modalImg.src = element.src; 
+}
 }
 
 /**
@@ -34,4 +35,5 @@ window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
     }
+
 }
