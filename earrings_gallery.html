@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Earrings Gallery - POLYGLOW CREATIONS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Gallery specific grid to fix stretching */
+        .product-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        
+        .gallery-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 280px; /* Sab images ka size barabar rakha hai */
+            object-fit: cover; /* Image stretch nahi hogi */
+            display: block;
+        }
+
+        .gallery-label {
+            padding: 12px;
+            background: #fdfaf5;
+            color: #5c4033;
+            font-weight: bold;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+        }
+
+        /* Modal styling for full screen view */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 85%;
+            border: 4px solid white;
+            border-radius: 5px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-content container">
+            <a href="index.html"><img src="logo.jpg" alt="Logo" class="logo"></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jewellery.html">Jewellery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container detail-page" style="padding: 40px 0;">
+        <h2 style="text-align: center; color: #5c4033;">Fashion Earrings Gallery</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            Click on any image to view it full screen, or <a href="contact.html?item=Earrings" style="color: #5c4033; font-weight: bold;">Order / Inquire</a> about any design.
+        </p>
+
+        <div class="product-gallery-grid">
+            
+            <div class="gallery-card" onclick="openModal(this.querySelector('img'))">
+                <img src="earrings2.jpg" alt="Earrings 1">
+                <div class="gallery-label">Design #01</div>
+            </div>
+
+            <div class="gallery-card" onclick="openModal(this.querySelector('img'))">
+                <img src="earrings3.jpg" alt="Earrings 2">
+                <div class="gallery-label">Design #02</div>
+            </div>
+
+            <div class="gallery-card" onclick="openModal(this.querySelector('img'))">
+                <img src="earrings4.jpg" alt="Earrings 3">
+                <div class="gallery-label">Design #03</div>
+            </div>
+
+            <div class="gallery-card" onclick="openModal(this.querySelector('img'))">
+                <img src="earrings5.jpg" alt="Earrings 4">
+                <div class="gallery-label">Design #04</div>
+            </div>
+
+            <div class="gallery-card" onclick="openModal(this.querySelector('img'))">
+                <img src="earrings6.jpg" alt="Earrings 5">
+                <div class="gallery-label">Design #05</div>
+            </div>
+
+            <div class="gallery-card" onclick="openModal(this.querySelector('img'))">
+                <img src="earrings7.jpg" alt="Earrings 6">
+                <div class="gallery-label">Design #06</div>
+            </div>
+
+            <div class="gallery-card" onclick="openModal(this.querySelector('img'))">
+                <img src="earrings8.jpg" alt="Earrings 7">
+                <div class="gallery-label">Design #07</div>
+            </div>
+
+            <div class="gallery-card" onclick="openModal(this.querySelector('img'))">
+                <img src="earrings9.jpg" alt="Earrings 8">
+                <div class="gallery-label">Design #08</div>
+            </div>
+            
+        </div>
+        
+        <p style="text-align: center; margin-top: 50px;">
+            <a href="jewellery.html" style="color: #5c4033; font-weight: bold; text-decoration: none;">&leftarrow; Back to Handmade Adornments</a>
+        </p>
+    </main>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer class="footer" style="background: #5c4033; color: white; padding: 25px 0; text-align: center;">
+        <p>&copy; 2025 POLYGLOW CREATIONS. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openModal(imgElement) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "flex";
+            modalImg.src = imgElement.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>

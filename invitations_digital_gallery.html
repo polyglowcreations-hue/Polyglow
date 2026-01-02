@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Invitations & Posters Gallery - POLYGLOW CREATIONS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Gallery Grid Layout */
+        .product-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover { transform: scale(1.03); }
+
+        /* Full Screen Zoom (Modal) Styling */
+        .modal {
+            display: none; /* Default hidden */
+            position: fixed;
+            z-index: 2000; /* Ensure it stays on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-content container">
+            <a href="index.html"><img src="logo.jpg" alt="POLYGLOW Logo" class="logo"></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="digital.html">Digital Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container detail-page" style="padding: 60px 0;">
+        <h2 style="color: #5c4033; text-align: center;">Digital Invitations & Posters Gallery</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 40px;">Click on any image to zoom.</p>
+
+        <div class="product-gallery-grid">
+            <img src="invitation1.jpg" alt="Pet Birthday" class="gallery-item" onclick="openModal(this)">
+            <img src="invitation2.jpg" alt="Hoorain Birthday" class="gallery-item" onclick="openModal(this)">
+            <img src="invitation3.jpg" alt="Wedding Invite" class="gallery-item" onclick="openModal(this)">
+            <img src="invitation4.jpg" alt="Poster Design" class="gallery-item" onclick="openModal(this)">
+        </div>
+        
+        <p class="back-link" style="text-align: center; margin-top: 50px;">
+            <a href="digital.html" style="color: #5c4033; font-weight: bold; text-decoration: none;">&leftarrow; Back to Digital Services</a>
+        </p>
+    </main>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Inline Script for guaranteed performance
+        function openModal(element) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "flex";
+            modalImg.src = element.src; // Correctly passing the source
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>

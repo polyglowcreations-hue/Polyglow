@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine & Layout Gallery - POLYGLOW CREATIONS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content container">
+            <a href="index.html"><img src="logo.jpg" class="logo"></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#collections">Offerings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container detail-page" style="padding: 40px 0;">
+        <h2 style="text-align: center; color: #5c4033;">Magazine Layouts & Printing Gallery</h2>
+        <p class="section-intro" style="text-align: center;">Explore our custom magazine layouts and premium printing. Click on any image to zoom, or <a href="contact.html?item=Magazine_Template">Request a Custom Template</a>.</p>
+
+        <div class="product-gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <img src="magazine1.jpg" class="gallery-item" onclick="openModal(this)" style="width:100%; cursor:pointer; border-radius:10px;">
+            <img src="magazine2.jpg" class="gallery-item" onclick="openModal(this)" style="width:100%; cursor:pointer; border-radius:10px;">
+            <img src="magazine3.jpg" class="gallery-item" onclick="openModal(this)" style="width:100%; cursor:pointer; border-radius:10px;">
+        </div>
+        
+        <p class="back-link" style="text-align: center; margin-top: 30px;"><a href="printing.html" style="color:#5c4033; font-weight:bold;">&leftarrow; Back to Printing Solutions</a></p>
+    </main>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer class="footer" style="text-align: center; padding: 20px; background: #5c4033; color: white;">
+        <p>&copy; 2025 POLYGLOW CREATIONS</p>
+    </footer>
+    <script src="gallery.js"></script>
+</body>
+</html>

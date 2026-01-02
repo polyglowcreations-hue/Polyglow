@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - POLYGLOW CREATIONS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-header { text-align: center; margin-bottom: 30px; }
+        .contact-header h2 { color: #5c4033; font-size: 2.2rem; }
+        .contact-header p { color: #666; }
+
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #5c4033; }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;
+        }
+
+        .btn-submit {
+            background: #5c4033; color: white; border: none; padding: 15px;
+            width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover { background: #4a3329; }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #5c4033;
+            font-size: 28px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #d4a373;
+            transform: translateY(-5px);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+
+        .info-item h4 { color: #5c4033; margin-bottom: 10px; font-size: 1.2rem; }
+        .info-item p { color: #555; font-size: 1rem; }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-content container">
+            <a href="index.html"><img src="logo.jpg" alt="POLYGLOW Logo" class="logo"></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#collections">Creative Offerings</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Connect With Us</h2>
+                <p>Have a question or want to place a custom order? Reach out to us!</p>
+            </div>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="form-name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="form-email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Interest / Service</label>
+                    <select id="form-interest">
+                        <option value="Customize Jewellery Order">Customize Jewellery Order</option>
+                        <option value="Digital Design Services">Digital Design Services</option>
+                        <option value="Printing Services">Printing Services</option>
+                        <option value="Other Inquiry">Other Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="form-message" placeholder="Describe your requirements in detail..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>Official Email</h4>
+                    <p>polyglowcreations@gmail.com</p>
+                </div>
+                <div class="info-item">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/polyglow_creations?igsh=MXFodHA2YjRveGh2eQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@polyglowcreations?_r=1&_t=ZP-92ZJPkRDNIV" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/share/1H2sPPvVqN/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.threads.net/@polyglow_creations" target="_blank"><i class="fa-brands fa-threads"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="background: #5c4033; color: white; padding: 25px 0; text-align: center;">
+        <p>&copy; 2025 POLYGLOW CREATIONS | Handmade with Love</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

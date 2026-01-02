@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates & Brochures Gallery - POLYGLOW CREATIONS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header class="header">
+        </header>
+
+    <main class="container detail-page">
+        <h2>Certificates & Brochures Gallery</h2>
+        <p class="section-intro">Examples of custom designed certificates and brochures. Click on any image to view it full screen, or <a href="contact.html?item=Certificate">Start Your Project</a>.</p>
+
+        <div class="product-gallery-grid">
+            
+            <img src="certificate1.jpg" alt="Certificate Sample 1" class="gallery-item" data-full-src="certificate1.jpg" onclick="openModal(this)">
+            
+            <img src="certificate2.jpg" alt="Certificate Sample 2" class="gallery-item" data-full-src="certificate2.jpg" onclick="openModal(this)">
+            
+            <img src="certificate3.jpg" alt="Certificate Sample 3" class="gallery-item" data-full-src="certificate3.jpg" onclick="openModal(this)">
+
+            <img src="certificate4.jpg" alt="Certificate Sample 4" class="gallery-item" data-full-src="certificate4.jpg" onclick="openModal(this)">
+            
+            <img src="certificate5.jpg" alt="Certificate Sample 5" class="gallery-item" data-full-src="certificate5.jpg" onclick="openModal(this)">
+
+        </div>
+        
+        <p class="back-link"><a href="digital.html">&leftarrow; Back to Digital Creation Services</a></p>
+    </main>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer class="footer">
+        </footer>
+    <script src="gallery.js"></script>
+</body>
+</html>

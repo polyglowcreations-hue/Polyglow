@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Adornments - POLYGLOW CREATIONS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Professional Sub-category Grid */
+        .sub-category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+        
+        .sub-category-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .sub-category-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-preview {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .image-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-info h4 {
+            color: #5c4033;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .product-info p {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .btn-view {
+            display: block;
+            background: #5c4033;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-view:hover {
+            background: #4a3329;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-content container">
+            <a href="index.html">
+                <img src="logo.jpg" alt="POLYGLOW CREATIONS Logo" class="logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#collections">Creative Offerings</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 50px 0;">
+        <h2 style="text-align: center; color: #5c4033; margin-bottom: 10px;">Handmade Adornments</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 40px;">Explore our custom-made Polymer Clay Jewellery and hair accessories.</p>
+
+        <div class="sub-category-grid">
+            
+            <div class="sub-category-item">
+                <div class="image-preview">
+                    <img src="tops1.jpg" alt="Polymer Clay Tops">
+                </div>
+                <div class="product-info">
+                    <h4>Polymer Clay Tops</h4>
+                    <p>Exclusive collection with unique textures and designs.</p>
+                    <a href="tops_gallery.html" class="btn-view">View Tops Gallery</a>
+                </div>
+            </div>
+
+            <div class="sub-category-item">
+                <div class="image-preview">
+                    <img src="earrings2.jpg" alt="Unique Earrings">
+                </div>
+                <div class="product-info">
+                    <h4>Unique Earrings</h4>
+                    <p>Handmade earrings perfect for every occasion.</p>
+                    <a href="earrings_gallery.html" class="btn-view">View Earrings Gallery</a>
+                </div>
+            </div>
+
+            <div class="sub-category-item">
+                <div class="image-preview">
+                    <img src="braclet4.jpg" alt="Bracelets and Bangles">
+                </div>
+                <div class="product-info">
+                    <h4>Bracelets & Bangles</h4>
+                    <p>Wide variety of handmade bracelets and statement bangles.</p>
+                    <a href="bracelets_bangles_gallery.html" class="btn-view">View Bracelets Gallery</a>
+                </div>
+            </div>
+
+            <div class="sub-category-item">
+                <div class="image-preview">
+                    <img src="crunchies7.jpg" alt="Fashion Scrunchies">
+                </div>
+                <div class="product-info">
+                    <h4>Fashion Srunchies</h4>
+                    <p>Unique, stylish hair accessories handcrafted for you.</p>
+                    <a href="crunchies_gallery.html" class="btn-view">View Scrunchies Gallery</a>
+                </div>
+            </div>
+
+            <div class="sub-category-item">
+                <div class="image-preview">
+                    <img src="customizeditem.jpg" alt="Custom Orders">
+                </div>
+                <div class="product-info">
+                    <h4>Customize Order</h4>
+                    <p>Customize order also available. Bring your unique jewellery vision to life!</p>
+                    <a href="contact.html" class="btn-view">Start Custom Order</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="index.html" style="color: #5c4033; font-weight: bold; text-decoration: none; border: 2px solid #5c4033; padding: 10px 25px; border-radius: 30px;">&leftarrow; Back to Home</a>
+        </div>
+    </main>
+
+    <footer class="footer" style="background: #5c4033; color: white; padding: 30px 0; text-align: center; margin-top: 50px;">
+        <p>&copy; 2025 POLYGLOW CREATIONS | Handmade with Love</p>
+    </footer>
+
+</body>
+</html>

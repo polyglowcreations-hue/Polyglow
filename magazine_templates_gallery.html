@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Layouts & Canva Templates Gallery - POLYGLOW CREATIONS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-content container">
+            <img src="logo.jpg" alt="POLYGLOW CREATIONS Logo" class="logo"> 
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#collections">Creative Offerings</a></li>
+                    <li><a href="index.html#about-us">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container detail-page">
+        <h2>Magazine Layouts & Canva Templates Gallery</h2>
+        <p class="section-intro">Explore our pre-designed and custom magazine layouts, templates, and editable Canva designs. Click on any image to zoom, or <a href="contact.html?item=Magazine_Template">Request a Custom Template</a>.</p>
+
+        <div class="product-gallery-grid">
+            
+            <img src="magazine1.jpg" alt="Magazine Sample 1" class="gallery-item" data-full-src="magazine1.jpg" onclick="openModal(this)">
+            
+            <img src="magazine3.jpg" alt="Magazine Sample 2" class="gallery-item" data-full-src="magazine3.jpg" onclick="openModal(this)">
+            
+        </div>
+        
+        <p class="back-link"><a href="digital.html">&leftarrow; Back to Digital Creation Services</a></p>
+    </main>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 POLYGLOW CREATIONS. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Facebook</a> | 
+                <a href="#" target="_blank">Instagram</a> | 
+                <a href="#" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+    <script src="gallery.js"></script>
+</body>
+</html>
